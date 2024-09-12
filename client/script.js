@@ -86,6 +86,8 @@ const sendForm = async () => {
                     }
 
                     const text = await res.json();
+                    console.log(`Mensagem enviada para ${cid}: ${text.message}`);
+                    alert(`Mensagem enviada para ${cid}`);
                 } catch (error) {
                     console.error(`Erro ao enviar a mensagem para ${cid}:`, error);
                     alert(`Erro ao enviar a mensagem para ${cid}`);
